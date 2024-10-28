@@ -52,4 +52,4 @@ def intersection_over_union(boxes_preds, boxes_labels, box_format='midpoint'):
     intersection = (x2_min - x1_max).clamp(0) * (y2_min - y1_max).clamp(0)
     union = (box1_x2 - box1_x1) * (box1_y2 - box1_y1) + (box2_x2 - box2_x1) * (box2_y2 - box2_y1) - intersection
     
-    return (intersection / union) + 1e-6
+    return (intersection / union) + 1e-6 
